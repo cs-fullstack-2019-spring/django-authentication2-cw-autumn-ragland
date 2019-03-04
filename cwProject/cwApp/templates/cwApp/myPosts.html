@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My Posts</title>
+</head>
+<body>
+
+{% if post_list %}
+
+    {% for eachPost in post_list %}
+    <h1>{{eachPost.blog_title}}</h1>
+    <p>{{eachPost.blog_entry}}</p>
+    {% endfor %}
+
+{% else %}
+<p>No Posts</p>
+{% endif %}
+
+<a href="{% url 'logout' %}">Logout</a>
+
+</body>
+</html>
